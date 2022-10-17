@@ -57,7 +57,7 @@ else
 fi
 
 echo "::debug::Verifying the current commit SHA: $CURRENT_SHA"
-git rev-parse --quiet --verify "$CURRENT_SHA^{commit}" 1
+git rev-parse --verify "$CURRENT_SHA^{commit}" 1
 echo "Exited: $?"
 git rev-parse --quiet --verify "$CURRENT_SHA^{commit}" 1>/dev/null 2>&1 && exit_status=$? || exit_status=$?
 
